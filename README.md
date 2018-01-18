@@ -20,9 +20,11 @@ http://localhost:8080/startup/
 Nível de complexidade escolhido
 ---------------------------------------
 
-- Foi escolhido o nível de complexidade Fácil. Entretanto, relato abaixo algumas peculiaridades do projeto:
-  * Foi usado o Servlets 3.0.1, JSP, JQuery e o Ajax para implementar algumas funcionalidades do front-end. Acredita-se que a opção por estas tecnologias tornaram a implementação do front-end um pouco mais complexas. Uma vez que alguns frameworks ou tecnologias como o JSF e Struts poderiam ter facilitado o desenvolvimento. Esta decisão foi tomada porque acreditou-se que o uso dessas tecnologias não seriam permitidas (?) no desenvolvimento do projeto.
-  * demais informações podem ser encontradas no arquivo pom.xml que está dentro do projeto.
+Foi escolhido o nível de complexidade Fácil. Entretanto, relato abaixo algumas peculiaridades do projeto:
+
+  - Usou-se Servlets 3.0.1, JSP, JQuery e o Ajax para implementar algumas funcionalidades do front-end. Acredita-se que a opção por estas tecnologias tornaram a implementação do front-end um pouco mais complexas. Uma vez que alguns frameworks ou tecnologias como o JSF e Struts poderiam ter facilitado o desenvolvimento. Esta decisão foi tomada porque acreditou-se que o uso dessas tecnologias não seriam permitidas (?) no desenvolvimento do projeto.
+  
+  - Demais informações podem ser encontradas no arquivo pom.xml que está dentro do projeto.
 
 
 Limitações conhecidas do projeto
