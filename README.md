@@ -32,3 +32,11 @@ Limitações conhecidas do projeto
 
 - apenas uma única promoção pode ser aplicada ao lanche selecionado;
 - não é possível pedir lanches diferentes no mesmo pedido, pode-se apenas alterar a quantidade de itens do lanche selecionado; 
+
+
+Licensa de uso
+---------------------------------------
+
+Não é possível utilizar os fontes deste projeto, mesmo que com cunho acadêmico, sem autorização prévia do desenvolvedor.
+
+Foi usado o template do website da Template Monster, disponível em http://www.templatemonster.com/
