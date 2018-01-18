@@ -184,14 +184,25 @@ public class PedidoTest {
 		.println("Quando eu adicionar um lanche do cardápio 'X-Egg Bacon' que têm 6 porções de queijo e aplicar a promoção 'Muito queijo'");
 
 	final Ingrediente ingredQueijo = MassaDadosUtil.getQueijo();
-	final Integer qtdAIncluir = 5;
-	final Integer qtdExistente = 1;
-	final Integer qtdTotal = qtdAIncluir + qtdExistente;
+	Integer qtdAIncluir = 0;
+	Integer qtdExistente = 0;
+	final Integer qtdPorcoesDesejada = 6;
 	final Lanche xEggBacon = MassaDadosUtil.getxEggBacon();
 
-	final ItemIngrediente itemIngredQueijo = new ItemIngrediente(ingredQueijo, qtdExistente);
+	// Deixa a quantidade do item como 1 pq será usado apenas para comparação do ingrediente
+	final ItemIngrediente itemIngredQueijo = new ItemIngrediente(ingredQueijo, 1);
+
+	// Como se deseja 6 porções deve-se calcular a quantidade de ingredientes a ser adicionada no item
+	qtdExistente = xEggBacon.getQtdDoItemIngrediente(itemIngredQueijo);
+	qtdAIncluir = qtdPorcoesDesejada - qtdExistente;
+	final Integer qtdTotal = qtdAIncluir + qtdExistente;
+
 	xEggBacon.adicionarItemIngrediente(itemIngredQueijo, qtdAIncluir);
+	Assert.assertEquals(qtdPorcoesDesejada, xEggBacon.getQtdDoItemIngrediente(itemIngredQueijo));
+
+	// associa a promoção e a quantidade do ingrediente deve estar correta
 	xEggBacon.setPromocao(MassaDadosUtil.getMuitoQueijo());
+	Assert.assertEquals(qtdPorcoesDesejada, xEggBacon.getQtdDoItemIngrediente(itemIngredQueijo));
 
 	System.out.println("Então será possível e o lanche terá o desconto correto e quantidade correta de porções de queijo");
 	pedido.adicionarItem(xEggBacon, 1, SOLICITANTE);

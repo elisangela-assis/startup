@@ -1,2 +1,11 @@
 *~
 *swap
+/target/generated-sources/
+/target/generated-test-sources/
+/target/m2e-wtp/
+/target/maven-archiver/
+/target/maven-status/
+/target/startup/
+/target/startup.war
+/target/surefire/
+/target/surefire-reports/
